@@ -1,15 +1,37 @@
-.topic-selector_root__3hWXB:hover {
-    height: unset
+.containers_left-header__xxBVU {
+	width: auto;
 }
 
-.topic-selector_root__3hWXB button {
-    height: 30px;
-    margin: 5px 5px 0px 0px;
+.switch_root__3-M1P {
+	display: none;	
+}
+
+.thought-list_list__3uqw4 {
+	border-top: .5px solid rgb(var(--colors-border-lightest));
+    margin-top: 10px;
+}
+
+.topic-selector_root__3hWXB:hover {
+    height: unset
 }
 
 .topic-selector_root__3hWXB {
     height: 43px;
     flex-wrap: wrap;
+	width: 50%;
+	padding: 0px 14px;
+}
+
+.topic-selector_root__3hWXB .topic-selector_topic-item-root__3bI_z {
+    height: 30px;
+	border-radius: 0px;
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.topic-selector_root__3hWXB .topic-selector_pin__2wS9p {
+	display: none;
 }
 
 .thought_content__2tOby p {
@@ -19,7 +41,9 @@
 }
 
 .thought_root__2UUuy {
-    padding: 1px 1px 1px 1px;
+    padding: 1px 1px 1px 1px;    
+	flex-direction: row-reverse;
+    justify-content: flex-end;
 }
 
 body {
@@ -28,19 +52,44 @@ body {
 
 #vListWrapper {
     position: relative;
-    width: 90%;
-    left: 5%;
+	margin-right: 20px;
+    overflow: hidden;
+}
+
+.actions_actions-with-reactions-wrapper__2tjMB>.actions_actions-wrapper-compact__2mQl_ {
+	margin-right: 15px;
+}
+
+.thought_root__2UUuy .thought_content__2tOby {
+    width: 60%;
+	display: flex;
+	padding-right: 10px;
+	align-items: center;
 }
 
 .thought_root__2UUuy .thought_topic-wrapper__i6-5O {
     margin-top: 0px;
+	width: 9%;
+    text-align: left;
+	height: inherit;
 }
 
-.thought_root__2UUuy .actions_actions-with-reactions-wrapper__2tjMB, .thought_root__2UUuy .thought_head__1Ww2C {
+.thought_root__2UUuy .actions_actions-with-reactions-wrapper__2tjMB {
     margin-bottom: 0px;
     margin-top: 0px;
-    transform: scale(0.75);
-    margin-left: -14%;
+	width: 5%;
+}
+
+.thought_root__2UUuy .thought_head__1Ww2C {
+	width: 15%;
+}
+
+.thought_root__2UUuy .bar_reaction-bar-root__QJzFH{
+	display: none;
+}
+
+.thought_root__2UUuy .post-preview_root__3VkfL{
+	display: none;
 }
 
 .post-preview_cover__DkpA8, .thought_img-wrapper__1uyhs, .card_frame-wrapper__RmrBC, .thought_player-wrapper__jVn4a, .typing-bar_typing-wrap__VbL8K, .card_third-thumb-wrapper__Av98_ {
@@ -187,7 +236,9 @@ body {
 }
 
 .desktop_left-container__iDp7e {
-    flex-basis: var(--leftsidewidth) !important
+    flex-basis: var(--leftsidewidth) !important;
+	flex-direction: row !important;
+	flex-wrap: wrap;
 }
 
 .url-turned a {
