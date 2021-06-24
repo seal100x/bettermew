@@ -12,11 +12,11 @@
 }
 
 .topic-selector_root__3hWXB:hover {
-    height: 7.5rem;
+    height: 7.5rem !important;
 }
 
 .topic-selector_root__3hWXB {
-    height: 7.5rem;
+    height: 7.5rem !important;
     flex-wrap: wrap;
 	width: 50%;
 	padding: 0px 14px;
