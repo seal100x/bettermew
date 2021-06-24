@@ -18,7 +18,7 @@
 .topic-selector_root__3hWXB {
     height: 7.5rem !important;
     flex-wrap: wrap;
-	width: 50%;
+	width: 40%;
 	padding: 0px 14px;
 	
 }
@@ -118,8 +118,7 @@ body {
 }
 
 .MuiPaper-elevation16 {
-    width: 50% !important;
-    right: 25%;
+    width: 60% !important;
 }
 
 .searchroot {
