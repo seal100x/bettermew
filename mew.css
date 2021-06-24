@@ -314,7 +314,7 @@ body {
     .card_root__185Tc, .button_reaction-btn__1pz7w, .search-bar_input__3bvsA {
         background-color: rgb(var(--colors-background-receive-msg));
     }
-    .card_content__2Ll2o, .font-medium, .text-md.truncate, .text-3xl, .text-xl, .my-4, .wiki-item_header__2XrPK, .text-2xl, div.MuiDialogContent-root>p, .user-setting-dialog_header__8oNfm, .right_white-btn__2jyHw, .ProseMirror, .searchdisplay div.form div {
+    .card_content__2Ll2o, .thought_quote-bar__1sliX, .font-medium, .text-md.truncate, .text-3xl, .text-xl, .my-4, .wiki-item_header__2XrPK, .text-2xl, div.MuiDialogContent-root>p, .user-setting-dialog_header__8oNfm, .right_white-btn__2jyHw, .ProseMirror, .searchdisplay div.form div {
         color: rgb(var(--colors-receive-msg));
     }
     .MuiPaper-elevation16, .MuiPaper-elevation {
@@ -331,4 +331,71 @@ body {
     .message-container_reaction-panel__1God9, .drawer_root__1WN7c.drawer_is-menu__4jjkJ.drawer_dialog__1N_bY, .plain-input_compose-textarea-wrapper__3oJPr {
         background-color: rgb(var(--colors-background-morelighter));
     }
+}
+
+.comment-item_root__1jR_s {
+    content-visibility: auto;
+    min-width: 500px;
+}
+
+.thought-widget {
+    position: absolute;
+    width: 40px;
+    bottom: 20%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(70 70 70 / 80%);
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.reversed {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+input.switcher+label {
+    margin: 0 0 5px 0;
+    width: 40px;
+    height: 20px;
+    background-color: #dddddd;
+    border-radius: 20px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+input.switcher+label:before, input.switcher+label:after {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    content: "";
+}
+
+input.switcher+label:before {
+    right: 0px;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    transition: background 0.4s;
+}
+
+input.switcher+label:after {
+    width: 20px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: margin 0.4s;
+}
+
+input.switcher:checked+label:before {
+    background-color: rgb(114 148 218);
+}
+
+input.switcher:checked+label:after {
+    margin-left: 20px;
 }
