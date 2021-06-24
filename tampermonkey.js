@@ -7,17 +7,20 @@
 // @match        https://mew.fun/n/*
 // @icon         https://g.doveyige.top/s2/favicons?domain=mew.fun
 // @grant        none
+// @require      https://seal100x.github.io/bettermew/mew.js
+// file:///E:/workspace/bettermew/mew.js
+
 // ==/UserScript==
 
 (function() {
     'use strict';
 
-    // Your code here...
-    //该脚本为使用cdn自动更新的脚本，有更新会自动实装。脚本仓库：https://github.com/yige233/bettermew
     window.onload = function () {
-        var script = document.createElement("script");
-        script.src = "https://cdn.jsdelivr.net/gh/yige233/bettermew/mew.js";
-        document.head.appendChild(script);
+		var e = document.createElement("link");
+		e.rel = "stylesheet";
+		e.type = "text/css";
+		e.href = "https://seal100x.github.io/bettermew/mew.css";
+		document.head.appendChild(e);
     }
 
 })();

@@ -146,6 +146,23 @@ const sth = {
             usernames = msgs = atmsg = null;
         };
     },
+	personalizationStyle: function () {
+		if(document.querySelector(".desktop_middle-container__1ZC7W")) {
+			document.querySelector(".desktop_middle-container__1ZC7W").remove();			
+		}
+		if(document.querySelector(".desktop_right-container__KZ6_1")) {
+			document.querySelector(".desktop_right-container__KZ6_1").remove();			
+		}
+		if(document.querySelector(".sidebar_root__6Jp7C")) {
+			document.querySelector(".sidebar_root__6Jp7C").style = "position: absolute;";			
+		}
+		if(document.querySelector(".desktop_left-container__iDp7e")) {
+			document.querySelector(".desktop_left-container__iDp7e").style = "width: 100%;padding: 0px 10px 10px 90px;";			
+		}
+		if(document.querySelector(".topic-selector_root__3hWXB")) {
+			document.querySelector(".topic-selector_root__3hWXB").style = "height: unset;";			
+		}		
+	},
     GUIadjust: function () {
         const subf1 = function (e, side, min, max) {
             switch (e.target.value) {
@@ -196,56 +213,6 @@ const sth = {
         };
         if (document.querySelector(".sidebar_root__6Jp7C")) {
             subf2({
-                max: 50,
-                min: 0,
-                type: "range",
-                id: "adjust-bar-l",
-                title: "调整想法栏宽度",
-                setting: "leftsidewidth",
-                events: [
-                    (el) => {
-                        el.addEventListener("change", (e) => {
-                            e.target.title = "想法栏宽度:" + e.target.value + "%";
-                            sth.settings.leftsidewidth = e.target.value;
-                            sth.savesettings();
-                        });
-                    },
-                    (el) => {
-                        el.addEventListener('wheel', (e) => {
-                            e.target.title = "想法栏宽度:" + e.target.value + "%";
-                            e.preventDefault();
-                            subf1(e, "leftsidewidth", 0, 50);
-                        });
-                    }
-                ],
-                extra: () => { return false }
-            });
-            subf2({
-                max: 50,
-                min: 0,
-                type: "range",
-                id: "adjust-bar-r",
-                title: "调整右侧信息栏宽度",
-                setting: "rightsidewidth",
-                events: [
-                    (el) => {
-                        el.addEventListener("change", (e) => {
-                            e.target.title = "信息栏宽度:" + e.target.value + "%";
-                            sth.settings.rightsidewidth = e.target.value;
-                            sth.savesettings();
-                        });
-                    },
-                    (el) => {
-                        el.addEventListener('wheel', (e) => {
-                            e.target.title = "信息栏宽度:" + e.target.value + "%";
-                            e.preventDefault();
-                            subf1(e, "rightsidewidth", 0, 50);
-                        });
-                    }
-                ],
-                extra: () => { return false }
-            });
-            subf2({
                 max: 100,
                 min: 0,
                 type: "range",
@@ -270,38 +237,11 @@ const sth = {
                 ],
                 extra: () => { return false }
             });
-            subf2({
-                max: null,
-                min: null,
-                type: "checkbox",
-                id: "reverse-desktop",
-                title: "反转桌面布局",
-                setting: null,
-                events: [
-                    (el) => {
-                        el.addEventListener("change", (e) => {
-                            if (e.target.checked) {
-                                document.querySelector(".desktop_root__3KNh_").style = "flex-direction: row-reverse;";
-                                sth.settings.totalreverse = true;
-                            } else {
-                                document.querySelector(".desktop_root__3KNh_").style = "flex-direction: row;";
-                                sth.settings.totalreverse = false;
-                            };
-                            sth.savesettings();
-                        });
-                    },
-                ],
-                extra: (el) => {
-                    if (sth.settings.totalreverse) {
-                        el.click();
-                    };
-                }
-            });
         };
-        document.body.style.setProperty("--leftsidewidth", sth.settings.leftsidewidth + "%");
-        document.body.style.setProperty("--rightsidewidth", sth.settings.rightsidewidth + "%");
         document.body.style.setProperty("--imgwidth", sth.settings.imgwidth + "%");
         document.body.style.setProperty("--imgleft", ((100 - sth.settings.imgwidth) / 2) + "%");
+		
+		sth.personalizationStyle();
     },
     imgdl: function () {
         var dlicon = document.createElement("div");
@@ -416,11 +356,6 @@ const sth = {
         } else {
             sth.savesettings();
         };
-        var e = document.createElement("link");
-        e.rel = "stylesheet";
-        e.type = "text/css";
-        e.href = "https://cdn.jsdelivr.net/gh/yige233/bettermew/mew.css?md5="+sth.datas.cssmd5;
-        document.head.appendChild(e);
         var options = {
             'childList': true,
             'arrtibutes': true,
