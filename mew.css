@@ -32,6 +32,12 @@
     padding: 5px;
 }
 
+.topic-selector_root__3hWXB .topic-selector_topic-item-root__3bI_z:hover {
+	overflow: visible;
+    white-space: normal;
+    border: none;	
+}
+
 .topic-selector_root__3hWXB .topic-selector_pin__2wS9p {
 	display: none;
 }
@@ -46,6 +52,13 @@
     padding: 1px 1px 1px 1px;    
 	flex-direction: row-reverse;
     justify-content: flex-end;
+}
+
+.thought_quote-bar__1sliX {
+    padding: 0;
+    position: absolute;    
+	left: 80%;
+    margin-top: 30px;
 }
 
 body {
@@ -65,7 +78,7 @@ body {
 .thought_root__2UUuy .thought_content__2tOby {
     width: 60%;
 	display: flex;
-	padding-right: 10px;
+	padding: 0 10px;
 	align-items: center;
 }
 
@@ -90,7 +103,9 @@ body {
 	display: none;
 }
 
-.thought_root__2UUuy .post-preview_root__3VkfL, .thought_root__2UUuy .card_root__21fei{
+.thought_root__2UUuy .post-preview_root__3VkfL,
+.thought_root__2UUuy .card_root__21fei,
+.thought_root__2UUuy .thought_quote__aR-_r{
 	display: none;
 }
 
