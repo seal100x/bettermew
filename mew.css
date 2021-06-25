@@ -8,7 +8,6 @@
 
 .thought-list_list__3uqw4 {
 	border-top: .5px solid rgb(var(--colors-border-lightest));
-    margin-top: 10px;
 }
 
 .topic-selector_root__3hWXB:hover {
@@ -24,11 +23,13 @@
 }
 
 .topic-selector_root__3hWXB .topic-selector_topic-item-root__3bI_z {
-    height: 30px;
-	border-radius: 0px;
-    width: 150px;
+	height: 30px;
+    border-radius: 0px;
+    width: 160px;
     white-space: nowrap;
     overflow: hidden;
+    justify-content: flex-start;
+    padding: 5px;
 }
 
 .topic-selector_root__3hWXB .topic-selector_pin__2wS9p {
